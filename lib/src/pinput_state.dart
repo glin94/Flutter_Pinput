@@ -336,9 +336,7 @@ class _PinputState extends State<Pinput>
     return _PinputFormField(
       enabled: isEnabled,
       validator: _validator,
-      child: FocusTrapArea(
-        focusNode: effectiveFocusNode,
-        child: MouseRegion(
+      child:  MouseRegion(
           cursor: _effectiveMouseCursor,
           onEnter: (PointerEnterEvent event) => _handleHover(true),
           onExit: (PointerExitEvent event) => _handleHover(false),
@@ -364,7 +362,6 @@ class _PinputState extends State<Pinput>
                 ),
               ),
             ),
-          ),
         ),
       ),
     );
