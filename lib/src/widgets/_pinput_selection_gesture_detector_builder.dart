@@ -17,14 +17,14 @@ class _PinputSelectionGestureDetectorBuilder
   }
 
   @override
-  void onDoubleTapDown(TapDownDetails details) {
+  void onDoubleTapDown(TapDragDownDetails details) {
     if (shouldShowSelectionToolbar) {
       editableText.showToolbar();
     }
   }
 
   @override
-  void onSingleTapUp(TapUpDetails details) {
+  void onSingleTapUp(TapDragUpDetails details) {
     super.onSingleTapUp(details);
     editableText.hideToolbar();
     _state._requestKeyboard();
